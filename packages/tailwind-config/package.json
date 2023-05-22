@@ -1,11 +1,14 @@
 {
-  "name": "tsconfig",
+  "name": "tailwind-config",
   "version": "0.0.1",
   "author": {
     "name": "Styllth Saraiva Ribeiro"
   },
   "private": true,
-  "license": "MIT",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  },
   "publishConfig": {
     "access": "public"
   }
