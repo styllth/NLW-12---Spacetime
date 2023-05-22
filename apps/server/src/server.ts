@@ -2,11 +2,18 @@ import "dotenv/config";
 
 import fastify from "fastify";
 import cors from "@fastify/cors";
+import { PrismaClient } from "@prisma/client";
 
 const app = fastify();
+const prisma = new PrismaClient();
 
 app.register(cors, {
   origin: true,
+});
+
+app.get("/users", async () => {
+  const users = await prisma.user.findMany();
+  return users;
 });
 
 app
